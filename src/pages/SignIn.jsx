@@ -1,9 +1,12 @@
 import React from "react";
+import RegisterForm from "../components/RegisterForm";
 
 const SignIn = () => {
   return (
     <div className="signup-container">
-      <div className="form-container">login and register components go here</div>
+      <div className="form-container">
+        <RegisterForm/>
+      </div>
     </div>
   );
 };
