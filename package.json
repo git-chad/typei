@@ -12,6 +12,7 @@
   "dependencies": {
     "@formkit/auto-animate": "^1.0.0-beta.6",
     "daisyui": "^2.52.0",
+    "firebase": "^9.22.1",
     "framer-motion": "^10.12.16",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
