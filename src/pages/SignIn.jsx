@@ -6,7 +6,7 @@ const SignIn = () => {
   return (
     <div className="signup-container">
       <div className="form-container">
-        {/* <RegisterForm/> */}
+        <RegisterForm/>
         <LoginForm/>
       </div>
     </div>
