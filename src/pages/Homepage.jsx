@@ -30,9 +30,12 @@ const Homepage = () => {
 
       <div className="hero-side right flex bg-[#211c1c] w-[50%] min-h-screen">
         <div className="ascii flex w-full h-full">
-          <div className="flex flex-col text-xl text-[1rem]" style={{ whiteSpace: "pre" }}>
+          <div
+            className="flex flex-col text-xl text-[1rem]"
+            style={{ whiteSpace: "pre" }}
+          >
             {/* <AsciiArt/> */}
-            <Asciitest/>
+            <Asciitest />
           </div>
         </div>
       </div>

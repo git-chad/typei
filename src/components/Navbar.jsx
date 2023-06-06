@@ -17,7 +17,7 @@ const Navbar = () => {
         <ul className="navegation-shit flex text-xl items-center space-x-12 basic-tc">
           <Link to="/Home"><li className="cursor-pointer transition">Home</li></Link>
           <Link to="/Dashboard"><li className="cursor-pointer transition">Dashboard</li></Link>
-          <Link to="/Login"><li className="cursor-pointer transition">Log in</li></Link>
+          <Link to="/SignIn"><li className="cursor-pointer transition">Sign up</li></Link>
           <Link to="/Premium"><li
             className=" access cursor-pointer transition bg-[#fd5c58] p-2 text-[#2c2525]
             drop-shadow-lg active:bg-[#2c2525] border-solid border-[1px]
