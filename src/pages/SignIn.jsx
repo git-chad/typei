@@ -1,6 +1,7 @@
 import React from "react";
-import RegisterForm from "../components/RegisterForm";
-import LoginForm from "../components/LoginForm";
+import RegisterForm from "../components/auth/RegisterForm";
+import LoginForm from "../components/auth/LoginForm";
+import AuthLogic from "../components/auth/AuthLogic";
 
 const SignIn = () => {
   return (
@@ -8,6 +9,7 @@ const SignIn = () => {
       <div className="form-container">
         <RegisterForm/>
         <LoginForm/>
+        <AuthLogic/>
       </div>
     </div>
   );

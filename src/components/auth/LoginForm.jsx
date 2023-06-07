@@ -1,14 +1,14 @@
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
-import { auth } from "../firebase";
+import { auth } from "../../firebase";
 
-const RegisterForm = () => {
+const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleRegister = (e) => {
+  const handleLogin = (e) => {
     e.preventDefault();
-    createUserWithEmailAndPassword(auth, email, password)
+    signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         console.log(userCredential);
       })
@@ -18,10 +18,10 @@ const RegisterForm = () => {
   };
 
   return (
-    <div className="register-container">
-      <div className="register-form-container">
-        <form onSubmit={handleRegister}>
-          <h1>Create an account</h1>
+    <div className="login-container">
+      <div className="login-form-container">
+        <form onSubmit={handleLogin}>
+          <h1>Log into your account</h1>
 
           <label>Email</label>
           <input
@@ -39,11 +39,11 @@ const RegisterForm = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
 
-          <button type="submit">Sign Up</button>
+          <button type="submit">Log In</button>
         </form>
       </div>
     </div>
   );
 };
 
-export default RegisterForm;
+export default LoginForm;
