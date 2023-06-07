@@ -38,8 +38,8 @@ const MarkdownBody = ({ selectedNote, onUpdateNote }) => {
         ></textarea>
       </div>
 
-      <div className="note-preview-area h-[50vh] m-0 flex flex-col">
-        <h1 className="flex justify-center text-2xl font-bold basic-tc p-5">
+      <div className="note-preview-area h-[50%] m-0 flex flex-col">
+        <h1 className="flex justify-center text-3xl font-bold basic-tc p-5">
           {selectedNote.title}
         </h1>
         <ReactMarkDown className="basic-tc">{selectedNote.body}</ReactMarkDown>

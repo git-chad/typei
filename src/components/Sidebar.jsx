@@ -13,7 +13,9 @@ const Sidebar = ({
 
   const handleAddNote = () => {
     if (noteCount >= 5) {
-      alert("You have reached the note limit. Upgrade to a premium account to add more notes.");
+      alert(
+        "You have reached the note limit. Upgrade to a premium account to add more notes."
+      );
       return;
     }
 
@@ -23,10 +25,14 @@ const Sidebar = ({
   return (
     <div className="sidebar w-[30%] min-h-[100vh] m-0 border-r border-[#211c1c]">
       <div className="sidebar-header flex justify-between p-5">
-        <h1 className="text-2xl font-bold basic-tc">your notes {noteCount}/5</h1>
+        <h1 className="text-2xl font-bold basic-tc">
+        Notes 📝 {noteCount}/5
+        </h1>
         <button
           onClick={handleAddNote}
-          className={`transition-all ease-in-out ${noteCount >= 5 ? "disabled" : ""}`}
+          className={`transition-all ease-in-out ${
+            noteCount >= 5 ? "disabled" : ""
+          }`}
           disabled={noteCount >= 5}
         >
           add
@@ -46,7 +52,10 @@ const Sidebar = ({
               key={note.id}
               onClick={() => setSelectedNote(note.id)}
               className={`sidebar-note p-5 cursor-pointer transition-all ease-in-out
-                ${note.id === selectedNote && "active p-5 cursor-pointer transition-all ease-in-out"}`}
+                ${
+                  note.id === selectedNote &&
+                  "active p-5 cursor-pointer transition-all ease-in-out"
+                }`}
             >
               <div className="note-title flex justify-between">
                 <strong className="text-xl basic-tc">{note.title}</strong>
