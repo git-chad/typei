@@ -2,7 +2,8 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import { auth } from "../../firebase";
 
-const LoginForm = () => {
+
+const LoginForm = ({ handleSignToggle }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -40,6 +41,9 @@ const LoginForm = () => {
           />
 
           <button type="submit">Log In</button>
+          <button onClick={handleSignToggle} className="toggle-button">
+            Create an account instead
+          </button>
         </form>
       </div>
     </div>
