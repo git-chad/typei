@@ -1,6 +1,6 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
-import { auth } from "../../firebase";
+import { auth } from "../../firebase"
 
 const RegisterForm = ({ handleSignToggle }) => {
   const [email, setEmail] = useState("");
@@ -19,37 +19,43 @@ const RegisterForm = ({ handleSignToggle }) => {
 
   return (
     <div className="flex flex-col">
-      <div className="register-form-container">
+      <div className="register-form-container flex flex-row justify-start">
         <form
           onSubmit={handleRegister}
-          className="w-[50%] h-[calc(100vh-80px)] bg-black flex flex-col justify-center"
+          className="w-[50%] max-w-[800px] h-[calc(100vh-80px)] bg-[#211c1c] flex flex-col justify-center p-12"
         >
-          <h1>Create an account</h1>
-          <div className="flex flex-col w-[33%] p-2">
-            <label>Email</label>
+          <h1 className="pb-10 text-5xl font-bold basic-tc">Create an account</h1>
+
+          <div className="p-5 space-y-3">
+            <label className="basic-tc text-lg">Email</label>
             <input
-              className=""
+              className="flex flex-col w-[66.6%] p-2 rounded-sm bg-[#3a3f3e77]"
               type="email"
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-          <div>
-            <label>Password</label>
+
+          <div className="p-5 space-y-3">
+            <label className="basic-tc text-lg">Password</label>
             <input
-              className="flex flex-col w-[33%] p-2"
+              className="flex flex-col w-[66.6%] p-2 rounded-sm bg-[#3a3f3e77]"
               type="password"
               placeholder="Enter your password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <button type="submit">Sign Up</button>
-          <button onClick={handleSignToggle} className="toggle-button">
+
+          <button className="bg-teal-800 mt-12 p-2 rounded-sm basic-tc w-[250px] self-center" type="submit">Sign Up</button>
+          <button className="basic-tc opacity-80 pt-2 self-center" onClick={handleSignToggle}>
             Sign in instead
           </button>
         </form>
+        <div className="art-container max-w-[50%]">
+          
+        </div>
       </div>
     </div>
   );

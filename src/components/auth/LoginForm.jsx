@@ -19,29 +19,33 @@ const LoginForm = ({ handleSignToggle }) => {
   };
 
   return (
-    <div className="login-container">
-      <div className="login-form-container">
-        <form onSubmit={handleLogin}>
-          <h1>Log into your account</h1>
-
-          <label>Email</label>
-          <input
-            type="email"
-            placeholder="Enter your email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-
-          <label>Password</label>
-          <input
-            type="password"
-            placeholder="Enter your password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-
-          <button type="submit">Log In</button>
-          <button onClick={handleSignToggle} className="toggle-button">
+    <div className="login-container flex flex-col">
+      <div className="login-form-container flex flex-row justify-start">
+        <form onSubmit={handleLogin}
+        className="w-[50%] max-w-[800px] h-[calc(100vh-80px)] bg-[#211c1c] flex flex-col justify-center p-12">
+          <h1 className="pb-10 text-5xl font-bold basic-tc">Log into your account</h1>
+          <div className="p-5 space-y-3">
+            <label className="basic-tc text-lg">Email</label>
+            <input
+              className="flex flex-col w-[66.6%] p-2 rounded-sm bg-[#3a3f3e77]"
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <div className="p-5 space-y-3">
+            <label className="basic-tc text-lg">Password</label>
+            <input
+              className="flex flex-col w-[66.6%] p-2 rounded-sm bg-[#3a3f3e77]"
+              type="password"
+              placeholder="Enter your password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          <button className="bg-teal-800 mt-12 p-2 rounded-sm basic-tc w-[250px] self-center" type="submit">Log In</button>
+          <button className="basic-tc opacity-80 pt-2 self-center" onClick={handleSignToggle}>
             Create an account instead
           </button>
         </form>
