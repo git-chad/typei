@@ -71,9 +71,9 @@ const Asciitest = () => {
       typeSpeed: 0,
       backSpeed: 1,
       startDelay: 200,
-      backDelay: 8000,
-      loop: true,
-      loopCount: Infinity,
+      // backDelay: 8000,
+      loop: false,
+      // loopCount: Infinity,
       cursorChar: "_",
     };
 
@@ -94,7 +94,8 @@ const Asciitest = () => {
 
   return (
     <div
-      className=" p-10 typed-wrap glow flex justify-center items-center text-center blur-[1px]"
+      className=" p-10 typed-wrap glow flex 
+      justify-center items-center text-center blur-[1px]"
       style={{ whiteSpace: "pre" }}
       // ref={}
     >

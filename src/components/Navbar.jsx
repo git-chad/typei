@@ -7,7 +7,6 @@ const Navbar = () => {
   return (
     <div className="navbar-container bg-[#2c2525] drop-shadow-xl w-screen flex justify-center">
       <div className="flex justify-between h-[5rem] w-[80%]">
-        {/* <a className="typeof text-3xl  font-bold">Typeof.</a> */}
         <Link to="/">
           <img
             src={logoCutout}
@@ -16,17 +15,24 @@ const Navbar = () => {
           />
         </Link>
         <ul className="navegation-shit flex text-xl items-center space-x-12 basic-tc">
-          <Link to="/"><li className="cursor-pointer transition">Home</li></Link>
-          <Link to="/Dashboard"><li className="cursor-pointer transition">Dashboard</li></Link>
-          <Link to="/SignIn"><li className="cursor-pointer transition">Sign up</li></Link>
-          <Link to="/Premium"><li
-            className=" access cursor-pointer transition bg-[#fd5c58] p-2 text-[#2c2525]
-            drop-shadow-lg active:bg-[#2c2525] border-solid border-[1px]
-           border-[#fd5c58] rounded-sm"
-          >
-            Get all-access
-          </li></Link>
-          <AuthLogic/>
+          <li>
+            <Link to="/">
+              <span className="cursor-pointer transition">Home</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/Dashboard">
+              <span className="cursor-pointer transition">Dashboard</span>
+            </Link>
+          </li>
+          <li>
+            <AuthLogic />
+          </li>
+          <li>
+            <Link to="/Premium">
+              <span className="access cursor-pointer transition bg-[#fd5c58] p-2 text-[#2c2525] drop-shadow-lg active:bg-[#2c2525] border-solid border-[1px] border-[#fd5c58] rounded-sm">Get all-access</span>
+            </Link>
+          </li>
         </ul>
       </div>
     </div>

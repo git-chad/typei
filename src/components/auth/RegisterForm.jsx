@@ -24,9 +24,9 @@ const RegisterForm = ({ handleSignToggle }) => {
           onSubmit={handleRegister}
           className="w-[50%] max-w-[800px] h-[calc(100vh-80px)] bg-[#211c1c] flex flex-col justify-center p-12"
         >
-          <h1 className="pb-10 text-5xl font-bold basic-tc">Create an account</h1>
+          <h1 className="pb-10 text-5xl font-bold basic-tc self-center">Create an account</h1>
 
-          <div className="p-5 space-y-3">
+          <div className="p-5 space-y-3 self-center">
             <label className="basic-tc text-lg">Email</label>
             <input
               className="flex flex-col w-[23rem] p-2 rounded-sm bg-[#3a3f3e77]"
@@ -37,7 +37,7 @@ const RegisterForm = ({ handleSignToggle }) => {
             />
           </div>
 
-          <div className="p-5 space-y-3">
+          <div className="p-5 space-y-3 self-center">
             <label className="basic-tc text-lg">Password</label>
             <input
               className="flex flex-col w-[23rem] p-2 rounded-sm bg-[#3a3f3e77]"

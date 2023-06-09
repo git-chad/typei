@@ -39,9 +39,13 @@ const MarkdownBody = ({ selectedNote, onUpdateNote }) => {
       </div>
 
       <div className="note-preview-area h-[50%] m-0 flex flex-col">
-        <h1 className="flex justify-center text-3xl font-bold basic-tc p-5">
+        <h1 className="flex justify-center text-3xl font-bold basic-tc pt-5 pb-2">
           {selectedNote.title}
         </h1>
+        <small className="note-meta block text-xs italic basic-tc text-center pb-3">{new Date(selectedNote.lastModified).toLocaleDateString("en-GB", {
+                  hour: "2-digit",
+                  minute: "2-digit",
+                })}</small>
         <ReactMarkDown className="basic-tc">{selectedNote.body}</ReactMarkDown>
       </div>
     </div>

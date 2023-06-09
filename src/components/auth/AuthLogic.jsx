@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { redirect } from "react-router-dom";
 import { auth } from "../../firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
+import { Link } from "react-router-dom";
 
 const AuthLogic = () => {
   const [authUser, setAuthUser] = useState(null);
+  
 
   useEffect(() => {
     const listen = onAuthStateChanged(auth, (user) => {
@@ -20,14 +23,36 @@ const AuthLogic = () => {
   }, []);
 
   const userSignOut = () => {
-    signOut(auth).then(() => {
+    signOut(auth)
+      .then(() => {
         console.log("sign out successful");
-    }).catch(error => console.log(error))
-  }
+        redirect('/');
+      })
+      .catch((error) => console.log(error));
+  };
+  
 
   return (
-    <div>
-      {authUser ? <><p>{`Signed In as ${authUser.email}`}</p><button onClick={userSignOut}>Sign Out</button></> : <p>Signed Out</p>}
+    <div className="space-x-12">
+      {authUser ? (
+        <>
+          <Link to="/Account">
+            <button className="cursor-pointer">Account</button>
+          </Link>
+          <Link to="/">
+            <button
+              className="cursor-pointer transition-color text-[#fd5c58]"
+              onClick={userSignOut}
+            >
+              Sign Out
+            </button>
+          </Link>  
+        </>
+      ) : (
+        <Link to="/SignIn">
+          <li className="cursor-pointer transition">Sign in</li>
+        </Link>
+      )}
     </div>
   );
 };

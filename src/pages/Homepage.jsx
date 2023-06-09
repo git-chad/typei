@@ -2,6 +2,7 @@ import React from "react";
 import logoBigRed from "../assets/logoBigRed.png";
 import AsciiArt from "../components/AsciiArt";
 import Asciitest from "../components/Asciitest";
+import { Link } from "react-router-dom";
 
 const Homepage = () => {
   return (
@@ -18,24 +19,24 @@ const Homepage = () => {
           </p>
           <p className="text-2xl py-5 italic">Oh, and you gotta pay for it.</p>
           <div className="self-center py-5">
-            <button
+            <Link to="/Premium"><button
               className="bg-teal-600 hover:bg-teal-700 active:bg-teal-800 
             w-40 h-12  transition-colors rounded-sm text-lg"
             >
               Try it out.
-            </button>
+            </button></Link>
           </div>
         </div>
       </div>
 
-      <div className="hero-side right flex bg-[#211c1c] w-[50%] min-h-screen overflow-hidden">
+      <div className="hero-side right flex bg-[#211c1c] -z-20 w-[50%] min-h-screen overflow-hidden">
         <div className="ascii flex w-full h-full">
           <div
             className="flex flex-col text-xl text-[1rem]"
             style={{ whiteSpace: "pre" }}
           >
             {/* <AsciiArt/> */}
-            <span className="skull-bg absolute inset-[10px]  text-center opacity-60 text-[#fd5c58] blur-[8px] overflow-hidden">
+            <span className="skull-bg absolute -z-10 inset-[10px] text-right  text-[#fd5c58] blur-[8px] overflow-hidden">
             {`
 
 ...----....
