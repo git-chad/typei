@@ -28,14 +28,15 @@ const Homepage = () => {
         </div>
       </div>
 
-      <div className="hero-side right flex bg-[#211c1c] w-[50%] min-h-screen">
+      <div className="hero-side right flex bg-[#211c1c] w-[50%] min-h-screen overflow-hidden">
         <div className="ascii flex w-full h-full">
           <div
             className="flex flex-col text-xl text-[1rem]"
             style={{ whiteSpace: "pre" }}
           >
             {/* <AsciiArt/> */}
-            <span className="absolute -z-1 text-center opacity-20 text-[#fd5c58] blur-sm">{`
+            <span className="skull-bg absolute inset-[10px]  text-center opacity-60 text-[#fd5c58] blur-[8px] overflow-hidden">
+            {`
 
 ...----....
 ..-:"''         ''"-..
@@ -86,7 +87,8 @@ I:: VPAIMSSSSSSSSSBSSSMMBSSSBBMMMMXXI:MMHIMMI
      "::.::.. .. .  ...:::IIHHMMMMHMV"
        "V::... . .I::IHHMMV"'
          '"VHVHHHAHHHHMMV:"'
-  `}</span>
+          `}</span>
+            
             <Asciitest />
           </div>
         </div>
