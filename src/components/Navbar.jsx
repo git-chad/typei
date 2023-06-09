@@ -1,6 +1,7 @@
 import React from "react";
 import logoCutout from "../assets/logoCutout.png";
 import { Link } from "react-router-dom";
+import AuthLogic from "./auth/AuthLogic";
 
 const Navbar = () => {
   return (
@@ -25,6 +26,7 @@ const Navbar = () => {
           >
             Get all-access
           </li></Link>
+          <AuthLogic/>
         </ul>
       </div>
     </div>

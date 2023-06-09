@@ -94,7 +94,7 @@ const Asciitest = () => {
 
   return (
     <div
-      className=" p-10 typed-wrap glow flex justify-center items-center text-center"
+      className=" p-10 typed-wrap glow flex justify-center items-center text-center blur-[1px]"
       style={{ whiteSpace: "pre" }}
       // ref={}
     >

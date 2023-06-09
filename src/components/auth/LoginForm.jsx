@@ -27,7 +27,7 @@ const LoginForm = ({ handleSignToggle }) => {
           <div className="p-5 space-y-3">
             <label className="basic-tc text-lg">Email</label>
             <input
-              className="flex flex-col w-[66.6%] p-2 rounded-sm bg-[#3a3f3e77]"
+              className="flex flex-col w-[23rem] p-2 rounded-sm bg-[#3a3f3e77]"
               type="email"
               placeholder="Enter your email"
               value={email}
@@ -37,14 +37,14 @@ const LoginForm = ({ handleSignToggle }) => {
           <div className="p-5 space-y-3">
             <label className="basic-tc text-lg">Password</label>
             <input
-              className="flex flex-col w-[66.6%] p-2 rounded-sm bg-[#3a3f3e77]"
+              className="flex flex-col w-[23rem] p-2 rounded-sm bg-[#3a3f3e77]"
               type="password"
               placeholder="Enter your password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <button className="bg-teal-800 mt-12 p-2 rounded-sm basic-tc w-[250px] self-center" type="submit">Log In</button>
+          <button className="bg-teal-600 hover:bg-teal-700 active:bg-teal-800 transition-colors mt-12 p-2 rounded-sm basic-tc w-[250px] self-center" type="submit">Log In</button>
           <button className="basic-tc opacity-80 pt-2 self-center" onClick={handleSignToggle}>
             Create an account instead
           </button>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const ModalLimitReached = () => {
   const [showModal, setShowModal] = useState(true);
@@ -6,6 +6,13 @@ const ModalLimitReached = () => {
   const handleClose = () => {
     setShowModal(false);
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowModal(false);
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
@@ -24,3 +31,4 @@ const ModalLimitReached = () => {
 };
 
 export default ModalLimitReached;
+

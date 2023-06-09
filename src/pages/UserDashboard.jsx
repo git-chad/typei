@@ -33,7 +33,7 @@ const UserDashboard = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-[100vh] bg-[#211c1c]">
+    <div className="flex flex-col h-[calc(100vh-80px)] bg-[#211c1c]">
       <div className="dash-main-body flex flex-row">
         <Sidebar
           notes={notes}
