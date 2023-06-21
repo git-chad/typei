@@ -11,13 +11,12 @@ const Homepage = () => {
         <img src={logoBigRed} className="m-10"></img>
         <div className="paragraph-description flex flex-col space-y-5 m-10 basic-tc">
           <p className="text-3xl py-5">
-            <b>Typei </b>is the most shitty markdown text editor you'll ever
-            see.
+            <b>Typei </b>A simple note-taking app that organizes your thoughts effortlessly.
           </p>
           <p className="text-2xl py-5">
-            <b>Unlimited notes</b> notes, with markdown support.
+            Capture your ideas with full <b>Markdown support.</b>
           </p>
-          <p className="text-2xl py-5 italic">Oh, and you gotta pay for it.</p>
+          <p className="text-2xl py-5 italic">Try it out for <b>free.</b></p>
           <div className="self-center py-5">
             <Link to="/Premium"><button
               className="bg-teal-600 hover:bg-teal-700 active:bg-teal-800 

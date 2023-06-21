@@ -28,6 +28,7 @@ const SignIn = () => {
             src={testVideo}
             controls
             autoPlay muted loop
+            tabIndex={-1}
           >
             Your browser does not support the video tag.
           </video>

@@ -49,7 +49,7 @@ const RegisterForm = ({ handleSignToggle }) => {
           </div>
 
           <button className="bg-teal-600 hover:bg-teal-700 active:bg-teal-800 transition-colors mt-12 p-2 rounded-sm basic-tc w-[250px] self-center" type="submit">Sign Up</button>
-          <button className="basic-tc opacity-80 pt-2 self-center" onClick={handleSignToggle}>
+          <button className="basic-tc opacity-80 pt-2 self-center transition-colors hover:text-teal-500"  onClick={handleSignToggle}>
             Sign in instead
           </button>
         </form>

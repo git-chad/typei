@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 
 const AuthLogic = () => {
   const [authUser, setAuthUser] = useState(null);
-  
 
   useEffect(() => {
     const listen = onAuthStateChanged(auth, (user) => {
@@ -26,31 +25,37 @@ const AuthLogic = () => {
     signOut(auth)
       .then(() => {
         console.log("sign out successful");
-        redirect('/');
+        redirect("/");
       })
       .catch((error) => console.log(error));
   };
-  
 
   return (
     <div className="space-x-12">
       {authUser ? (
-        <>
+        <div className="flex space-x-12">
+          <Link to="/Dashboard">
+            <button className="btn-nav cursor-pointer transition-colors">
+              Dashboard
+            </button>
+          </Link>
           <Link to="/Account">
-            <button className="cursor-pointer">Account</button>
+            <button className="btn-nav cursor-pointer transition-colors">
+              Account
+            </button>
           </Link>
           <Link to="/">
             <button
-              className="cursor-pointer transition-color text-[#fd5c58]"
+              className="btn-nav-signout transition-colors cursor-pointer text-[#fd5c58]"
               onClick={userSignOut}
             >
               Sign Out
             </button>
-          </Link>  
-        </>
+          </Link>
+        </div>
       ) : (
         <Link to="/SignIn">
-          <li className="cursor-pointer transition">Sign in</li>
+          <li className="btn-nav cursor-pointer transition-colors">Sign in</li>
         </Link>
       )}
     </div>

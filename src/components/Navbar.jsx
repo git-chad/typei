@@ -17,12 +17,7 @@ const Navbar = () => {
         <ul className="navegation-shit flex text-xl items-center space-x-12 basic-tc">
           <li>
             <Link to="/">
-              <span className="cursor-pointer transition">Home</span>
-            </Link>
-          </li>
-          <li>
-            <Link to="/Dashboard">
-              <span className="cursor-pointer transition">Dashboard</span>
+              <span className="btn-nav cursor-pointer transition">Home</span>
             </Link>
           </li>
           <li>
@@ -30,7 +25,9 @@ const Navbar = () => {
           </li>
           <li>
             <Link to="/Premium">
-              <span className="access cursor-pointer transition bg-[#fd5c58] p-2 text-[#2c2525] drop-shadow-lg active:bg-[#2c2525] border-solid border-[1px] border-[#fd5c58] rounded-sm">Get all-access</span>
+              <span className="access cursor-pointer transition bg-[#fd5c58] p-2 text-[#2c2525] drop-shadow-lg active:bg-[#2c2525] border-solid border-[1px] border-[#fd5c58] rounded-sm">
+                Get all-access
+              </span>
             </Link>
           </li>
         </ul>
