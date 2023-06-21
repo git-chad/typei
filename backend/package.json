@@ -1,0 +1,14 @@
+{
+  "name": "typei",
+  "version": "1.0.0",
+  "description": "note taking app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "git-chad",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
