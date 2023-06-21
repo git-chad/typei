@@ -5,7 +5,7 @@ import SignIn from "./pages/SignIn";
 import UserDashboard from "./pages/UserDashboard";
 import {Route, Routes} from "react-router-dom";
 import Account from "./pages/Account";
-import AuthLogic from "./components/auth/AuthLogic";
+
 
 function App() {
   return (
