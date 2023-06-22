@@ -11,25 +11,12 @@ const Sidebar = ({
   const sortNotes = notes.sort((a, b) => b.lastModified - a.lastModified);
   const noteCount = notes.length;
 
-  const handleAddNote = () => {
-    if (noteCount >= 5) {
-      alert(
-        "You have reached the note limit. Upgrade to a premium account to add more notes."
-      );
-      return;
-    }
-
-    onAddNote();
-  };
-
   return (
     <div className="sidebar w-[30%] min-h-[100vh] m-0 border-r border-[#211c1c]">
       <div className="sidebar-header flex justify-between p-5">
-        <h1 className="text-2xl font-bold basic-tc">
-        Notes 📝 {noteCount}/5
-        </h1>
+        <h1 className="text-2xl font-bold basic-tc">Notes 📝 {noteCount}/5</h1>
         <button
-          onClick={handleAddNote}
+          onClick={onAddNote} // Call onAddNote directly
           className={`transition-all ease-in-out ${
             noteCount >= 5 ? "disabled" : ""
           }`}
